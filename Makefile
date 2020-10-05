@@ -8,6 +8,10 @@ help: ## This help
 
 all: serve
 
+.PHONY: update
+update:
+	git submodule update --recursive
+
 .PHONY: serve
 serve: ## Serve on http://localhost:1313 and follow changes
 	docker-compose up
@@ -15,4 +19,3 @@ serve: ## Serve on http://localhost:1313 and follow changes
 .PHONY: build
 build: ## Build site locally
 	docker build -t hugo . && docker run --rm -v $(shell pwd):/srv/hugo hugo hugo --buildDrafts
-

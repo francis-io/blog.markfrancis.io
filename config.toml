@@ -25,22 +25,22 @@ googleAnalytics = ""
 	homepage = false
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["hugo","vitae","theme","static"]
+	#keywords = ["hugo","vitae","theme","static"]
 
 	# Add meta description in head part
-	description = "Vitae is a blog theme for Hugo that focuses on your content."
+	#description = "Vitae is a blog theme for Hugo that focuses on your content."
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "All about static site generation"
+	#pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
-	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+	subtitle = "A collection of projects and solutions I find while working as a DevOps Engineer"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
 
 	# Add math typesetting with KaTeX (Global with this Param)
-	math = true
+	#math = true
 
 	# Optional 80x80 avatar image.
 	avatar = "/img/avatar.jpeg"
@@ -86,35 +86,25 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All Posts"
-url = "/post"
-weight = 2
-
-[[menu.main]]
 name = "About"
 url = "/about"
 weight = 3
 
 [[menu.main]]
-name = "Tags"
-url = "/tags"
+name = "CV"
+url = "https://docs.google.com/document/d/1l_bFhQd5GpASZfMpg-iOlLcJz4xbOY3R4FGz1-9f9eQ/edit?usp=sharing"
 weight = 4
-
-[[menu.main]]
-name = "Categories"
-url = "/categories"
-weight = 5
 
 # Social Menu
 [[params.social]]
 name = "Github"
 icon = "fab fa-github"
-url = "https://github.com/dataCobra/hugo-vitae"
+url = "https://github.com/francis-io"
 
 #[[params.social]]
 #name = "Email"
 #icon = "fas fa-envelope"
-#cmd = "mailto:example@example.com"
+#cmd = "mailto:mark@markfrancis.io"
 
 [[params.social]]
 name = "RSS"
