@@ -19,3 +19,11 @@ serve: ## Serve on http://localhost:1313 and follow changes
 .PHONY: build
 build: ## Build site locally
 	docker build -t hugo . && docker run --rm -v $(shell pwd):/srv/hugo hugo hugo --buildDrafts
+
+create-app:
+	aws amplify \
+		--name blog.markfrancis.io \
+		--description blog.markfrancis.io \
+		--repository https://github.com/francis-io/hugo-blog-v2 \
+		--platform Hugo
+

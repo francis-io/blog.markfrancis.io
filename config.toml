@@ -1,4 +1,4 @@
-baseURL = "http://blog.markfrancis.io/"
+baseURL = "https://blog.markfrancis.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 #author = ""
@@ -84,11 +84,6 @@ enabled = false
 name = "Home"
 url = "/"
 weight = 1
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
 
 [[menu.main]]
 name = "CV"
