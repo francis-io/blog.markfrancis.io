@@ -1,9 +1,12 @@
-FROM alpine:3.12
+ARG ALPINE_VERSION=${ALPINE_VERSION}
+FROM alpine:${ALPINE_VERSION}
 
-LABEL maintainer='Yan QiDong <yanqd0@outlook.com>'
+ARG HUGO_VERSION=${HUGO_VERSION}
 
-ENV HUGO_VERSION=0.75.1 \
-    HUGO_SITE=/srv/hugo
+# ENV HUGO_VERSION=${HUGO_VERSION} \
+#     HUGO_SITE=/srv/hugo
+
+ENV HUGO_SITE=/srv/hugo
 
 RUN apk --no-cache add \
         curl \

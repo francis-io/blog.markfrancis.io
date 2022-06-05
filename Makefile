@@ -6,24 +6,15 @@ help: ## This help
 # Supress printing of the make command
 .SILENT:
 
-all: serve
-
 .PHONY: update
 update:
 	git submodule update --recursive
+	echo "Updated submodules"
 
 .PHONY: serve
-serve: ## Serve on http://localhost:1313 and follow changes
+serve: update ## Serve on http://localhost:1313 and follow changes
 	docker-compose up
 
-.PHONY: build
-build: ## Build site locally
-	docker build -t hugo . && docker run --rm -v $(shell pwd):/srv/hugo hugo hugo --buildDrafts
-
-create-app:
-	aws amplify \
-		--name blog.markfrancis.io \
-		--description blog.markfrancis.io \
-		--repository https://github.com/francis-io/hugo-blog-v2 \
-		--platform Hugo
-
+# .PHONY: build
+# build: update ## Build site locally
+# 	docker build -t hugo . && docker run --rm -v $(shell pwd):/srv/hugo hugo hugo --buildDrafts
