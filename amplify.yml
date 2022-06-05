@@ -1,15 +1,11 @@
-version: 0.1
+version: 1
 frontend:
   phases:
     build:
       commands:
-        - HUGO_VERSION=0.75.1
+        - export $(cat .env | xargs)  # Load env vars
         - wget --quiet https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-        - tar -xf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz hugo
-        - mv hugo /usr/bin/hugo
-        - rm -rf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-        - which hugo
-        - hugo version
+        - tar -xf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz hugo && mv hugo /usr/bin/hugo && hugo version
         - hugo --buildDrafts
   artifacts:
     baseDirectory: /public/
