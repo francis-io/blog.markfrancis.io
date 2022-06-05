@@ -2,7 +2,12 @@ version: '3'
 
 services:
   hugo:
-    build: .
+    #env_file: .env
+    build:
+      context: .
+      args:
+        ALPINE_VERSION: ${ALPINE_VERSION}
+        HUGO_VERSION: ${HUGO_VERSION}
     volumes:
       - .:/srv/hugo
     ports:
