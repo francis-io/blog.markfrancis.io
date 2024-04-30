@@ -18,7 +18,7 @@ OR
 
 ## Docker-compose.yml example for NFS
 
-```
+```bash
 version: "3.7"
 
 services:
@@ -46,7 +46,7 @@ volumes:
 
 ## Docker-compose.yml example for SAMBA/CIFS
 
-```
+```bash
 version: "3.7"
 
 services:

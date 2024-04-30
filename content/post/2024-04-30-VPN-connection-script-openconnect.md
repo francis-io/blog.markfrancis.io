@@ -9,7 +9,7 @@ The latest was a Cisco AnyConnect VPN. You also needed to type the first 4 chara
 
 Eventually, I plan to fully automate the OTP entry, but I've not found a solution I like. Ideally, this OTP would be cloud saved, with an API to request them.
 
-```
+```bash
 #!/usr/bin/expect -f
 
 # This script is designed to make connecting to a AnyConnect VPN using the openconnect.
