@@ -7,7 +7,7 @@ ARG HUGO_VERSION
 ENV HUGO_VERSION=${HUGO_VERSION} \
     HUGO_SITE=/srv/hugo
 
-RUN apk --no-cache add hugo=${HUGO_VERSION}
+RUN apk --no-cache add hugo=${HUGO_VERSION}-r0
 
 WORKDIR ${HUGO_SITE}
 
