@@ -1,8 +1,9 @@
 # Generated files by hugo
 /public/
-/resources/_gen/
+/resources/
 
 # Executable may be added to repository
 hugo.exe
 hugo.darwin
 hugo.linux
+.hugo_build.lock

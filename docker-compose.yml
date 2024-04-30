@@ -2,7 +2,7 @@ version: '3'
 
 services:
   hugo:
-    #env_file: .env
+    env_file: .env
     build:
       context: .
       args:
@@ -11,4 +11,4 @@ services:
     volumes:
       - .:/srv/hugo
     ports:
-      - 1313:1313
+      - 8080:8080

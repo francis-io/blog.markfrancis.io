@@ -13,7 +13,7 @@ This is the outcome of many hours of tweaking and troubleshooting. I hope this h
 
 * A DNS record that matches the below example (`pass.{DOMAIN}`)and points to where ever you host this service.
 
-```
+```bash
 version: "3.8"
 
 services:

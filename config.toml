@@ -1,107 +1,52 @@
-baseURL = "https://blog.markfrancis.io/"
-languageCode = "en-us"
-defaultContentLanguage = "en"
-# author = ""
-title = "Personal Blog - Mark Francis"
-theme = "hugo-vitae"
-paginate = 5
-enableRobotsTXT = true
+baseurl = "http://blog.markfrancis.io"
+title = "Mark James Francis"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
 
-# copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
+enableEmoji = true
 
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+paginate = 20
 
-googleAnalytics = ""
-
-[taxonomies]
-	tag = "tags"
-	category = "categories"
-	series = "series"
+[markup.highlight]
+style = "github-dark"
 
 [params]
-	# Use homepage.md instead of a list of posts
-	homepage = false
+  author = "Mark James Francis"
+  info = "Senior DevOps Engineer"
+  description = "Marks personal website"
+  keywords = "blog,developer, devops,cloud,personal"
+  avatarurl = "/images/avatar.jpeg"
+  # gravatar = "john.doe@example.com"
 
-	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	#keywords = ["hugo","vitae","theme","static"]
+  # For the footer copywrite
+  since = 2016
+  #dateFormat = "January 2, 2006"
 
-	# Add meta description in head part
-	#description = "Vitae is a blog theme for Hugo that focuses on your content."
+  colorScheme = "auto"
 
-	# Add pagetitle to homepage <title> tag
-	#pagetitle = "All about static site generation"
+  # Series see also post count
+  maxSeeAlsoItems = 5
 
-	# Add a subtitle to your website
-	subtitle = "A collection of projects and solutions I find while working as a DevOps Engineer"
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
 
-	# Activate to show authors on pages if available
-	#listAuthor = true
-
-	# Add math typesetting with KaTeX (Global with this Param)
-	#math = true
-
-	# Optional 80x80 avatar image.
-	avatar = "/img/avatar.jpeg"
-
-	# Optional favicons for website
-	#favicon = true
-
-	# Add list of sections that should show up on the homepage
-        mainSections = ["post"]
-
-	# Add list of Sections/Types that should no be considered by RSS
-	#nofeedSections = ["post"]
-
-	# Deactivate Taxonomies for specific page types
-	#disableTaxoTypes = [""]
-
-	# Custom CSS applied to default styles. (Path could be "static/css/")
-	#customCSS = "css/custom.css"
-
-# Comments
-[params.comments]
-# Enable Comments with "true"
-enabled = false
-
-# Comment provider:
-#   disqus (https://disqus.com)
-#   commento (https://commento.io)
-#engine = "disqus"
-
-# Content types to disable comments on.
-#disableOnTypes = ["page"]
-
-[params.comments.disqus]
-#shortname = "" # Paste the shortname from your Disqus dashboard.
-
-[params.comments.commento]
-#host = "" # Paste the domain of you commento.io system
-
-# Navigation
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "CV"
-url = "https://docs.google.com/document/d/1gUNrRtR7Pvk0oRyUXoC64oA3aPXXEYnM/edit?usp=sharing&ouid=103646115552904160729&rtpof=true&sd=true"
-weight = 4
-
-# Social Menu
+# Social links
 [[params.social]]
-name = "Github"
-icon = "fab fa-github"
-url = "https://github.com/francis-io"
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/francis-io"
 
-#[[params.social]]
-#name = "Email"
-#icon = "fas fa-envelope"
-#cmd = "mailto:mark@markfrancis.io"
-
-[[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url = "/index.xml"
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "post/"
+[[menu.main]]
+  name = "CV"
+  weight = 2
+  url = "https://docs.google.com/document/d/1gUNrRtR7Pvk0oRyUXoC64oA3aPXXEYnM/edit?usp=sharing&ouid=107637890190679795874&rtpof=true&sd=true"
