@@ -17,7 +17,7 @@ style = "github-dark"
   info = "Senior DevOps Engineer"
   description = "Marks personal website"
   keywords = "blog,developer,devops,cloud,personal"
-  #avatarurl = "images/avatar.jpeg"
+  avatarurl = "images/avatar.jpeg"
   # gravatar = "john.doe@example.com"
 
   # For the footer copywrite
