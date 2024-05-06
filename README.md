@@ -1,3 +1,1 @@
-https://markfrancis.io
-
-A simple blog on AWS Amplify.
+https://markfrancis.io (https://francis-io.github.io)
