@@ -38,6 +38,7 @@ jobs:
           submodules: recursive
           fetch-depth: 0
       - name: Load dotenv file
+        id: dotenv
         uses: falti/dotenv-action@v1.1.2
         with:
           log-variables: true
