@@ -23,10 +23,15 @@ style = "github-dark"
   since = 2016
   #dateFormat = "January 2, 2006"
 
-  colorScheme = "auto"
+  colorScheme = "dark"
+  hideColorSchemeToggle = "true"
 
   # Series see also post count
   maxSeeAlsoItems = 5
+
+[services]
+  [services.disqus]
+    shortname = 'markfrancis.io'
 
 [taxonomies]
   category = "categories"
