@@ -32,10 +32,11 @@ jobs:
     # env:
     #   HUGO_VERSION: 0.125.4
     steps:
+      - name: Load dotenv file
+        uses: falti/dotenv-action@v1.1.2
       - name: Install Hugo CLI
         run: |
-          export $(cat .env | xargs)
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ steps.dotenv.outputs.hugo_version }}/hugo_extended_${{ steps.dotenv.outputs.hugo_version }}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
       - name: Checkout
         uses: actions/checkout@v4
