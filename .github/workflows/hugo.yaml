@@ -22,13 +22,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     env:
@@ -39,8 +37,6 @@ jobs:
           export $(cat .env | xargs)
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
-      # - name: Install Dart Sass
-      #   run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
         with:
