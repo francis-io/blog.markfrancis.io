@@ -1,4 +1,4 @@
-baseurl = "http://blog.markfrancis.io"
+#baseurl = "http://blog.markfrancis.io"
 relativeURLs = true
 title = "Mark James Francis"
 theme = "hugo-coder"
