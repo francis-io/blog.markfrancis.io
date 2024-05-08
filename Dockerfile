@@ -10,19 +10,15 @@ ENV HUGO_VERSION=${HUGO_VERSION} \
 RUN apk --no-cache add hugo=${HUGO_VERSION}-r0
 
 WORKDIR ${HUGO_SITE}
-
 VOLUME ${HUGO_SITE}
 
-#EXPOSE 80
 
 CMD hugo server \
     --bind 0.0.0.0 \
-    --port 8080 \
+    --port 80 \
     --disableFastRender \  
     --cleanDestinationDir \
-    --navigateToChanged \
     --gc \
     --minify \
     --navigateToChanged \
-    --noBuildLock \
-    --templateMetrics
+    --noBuildLock
