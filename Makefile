@@ -16,6 +16,7 @@ apply: _setup _login-gh _init-submodules  ## Run Terraform apply
 serve: _setup ## Serve on http://localhost:80 and follow changes
 	docker-compose down; docker-compose up --build
 
+
 ### Supporting targets ###
 .PHONY: _setup
 _setup:

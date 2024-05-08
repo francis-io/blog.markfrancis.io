@@ -4,6 +4,8 @@ provider "aws" {
 provider "github" {
 }
 
+provider "http" {}
+
 terraform {
   required_providers {
     aws = {

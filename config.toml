@@ -1,10 +1,12 @@
-# baseurl = "/"
 title = "Mark James Francis"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
 enableEmoji = true
+
+# Only used for local serve, overwritten on build in CI
+baseurl = "http://localhost"
 
 paginate = 20
 
@@ -19,19 +21,12 @@ style = "github-dark"
   avatarurl = "images/avatar.jpeg"
   # gravatar = "john.doe@example.com"
 
-  # For the footer copywrite
+  # For the footer copyright
   since = 2016
   #dateFormat = "January 2, 2006"
 
   colorScheme = "dark"
-  hideColorSchemeToggle = "true"
-
-  # Series see also post count
-  maxSeeAlsoItems = 5
-
-[services]
-  [services.disqus]
-    shortname = 'markfrancis.io'
+  hideColorSchemeToggle = "false"
 
 [taxonomies]
   category = "categories"
